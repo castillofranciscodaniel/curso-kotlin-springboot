@@ -7,7 +7,7 @@ enum class ItemCategory {
 }
 
 data class Item(
-    @Id val id: String? = null,
+    @Id val id: Int? = null,
     val name: String,
     val category: ItemCategory,
     val description: String,
