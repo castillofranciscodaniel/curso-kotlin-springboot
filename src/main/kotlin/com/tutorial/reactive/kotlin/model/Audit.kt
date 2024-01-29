@@ -1,8 +1,10 @@
 package com.tutorial.reactive.kotlin.model
 
+import org.springframework.data.annotation.CreatedDate
+import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDate
 
 abstract class Audit(
-    val createdDate: LocalDate? = null,
-    val updatedDate: LocalDate? = null
+    @CreatedDate val createdDate: LocalDate? = null,
+    @LastModifiedDate val updatedDate: LocalDate? = null
 )

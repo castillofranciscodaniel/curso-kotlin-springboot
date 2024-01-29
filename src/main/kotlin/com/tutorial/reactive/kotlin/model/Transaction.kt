@@ -1,13 +1,15 @@
 package com.tutorial.reactive.kotlin.model
 
+import org.springframework.data.annotation.Id
+
 
 data class Transaction(
-    val id: String? = null,
+    @Id val id: String? = null,
     val details: List<Details>
 ) : Audit() {
 
     data class Details(
-        val id: String? = null,
+        @Id val id: String? = null,
         val item: Item,
         val amount: Int,
         val currentPrice: Double,

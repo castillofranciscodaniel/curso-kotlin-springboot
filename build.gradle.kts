@@ -19,7 +19,11 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+	implementation("org.postgresql:r2dbc-postgresql:1.0.4.RELEASE")
+	implementation("org.springframework.data:spring-data-jpa:3.2.2")
+	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
+
+
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")

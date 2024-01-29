@@ -1,11 +1,13 @@
 package com.tutorial.reactive.kotlin.model
 
+import org.springframework.data.annotation.Id
+
 enum class ItemCategory {
     TECHNOLOGY
 }
 
 data class Item(
-    val id: String? = null,
+    @Id val id: String? = null,
     val name: String,
     val category: ItemCategory,
     val description: String,
