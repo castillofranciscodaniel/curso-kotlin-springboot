@@ -19,10 +19,9 @@ repositories {
 }
 
 dependencies {
-	implementation("org.postgresql:r2dbc-postgresql:1.0.4.RELEASE")
-	implementation("org.springframework.data:spring-data-jpa:3.2.2")
+	implementation("org.postgresql:r2dbc-postgresql:1.0.0.RELEASE")
 	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
-
+	implementation("org.postgresql:postgresql:42.2.5")
 
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

@@ -1,16 +1,18 @@
 package com.tutorial.reactive.kotlin.model
 
 import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Table
 
 enum class ItemCategory {
     TECHNOLOGY
 }
 
+@Table("Item")
 data class Item(
     @Id val id: Int? = null,
     val name: String,
     val category: ItemCategory,
-    val description: String,
+    val description: String? = null,
     val price: Double 
 ) : Audit() {
 

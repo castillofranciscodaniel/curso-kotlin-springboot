@@ -2,10 +2,11 @@ package com.tutorial.reactive.kotlin
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories
 
-@SpringBootApplication(scanBasePackages = ["com.tutorial.reactive.kotlin.repository"])
+@SpringBootApplication
+@EnableR2dbcRepositories
 class KotlinApplication
 fun main(args: Array<String>) {
 	runApplication<KotlinApplication>(*args)
 }
-//"com.tutorial.reactive.kotlin"
