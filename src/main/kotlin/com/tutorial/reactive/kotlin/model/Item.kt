@@ -1,7 +1,11 @@
 package com.tutorial.reactive.kotlin.model
 
+import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.Id
+import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.relational.core.mapping.Table
+import java.time.LocalDate
+import java.time.LocalDateTime
 
 enum class ItemCategory {
     TECHNOLOGY
@@ -13,8 +17,10 @@ data class Item(
     val name: String,
     val category: ItemCategory,
     val description: String? = null,
-    val price: Double 
-) : Audit() {
+    val price: Double,
+    override val createdDate: LocalDateTime? = null,
+    override val updatedDate: LocalDateTime? = null
+) : Audit  {
 
     @Throws(Exception::class)
     fun setName(name: String): Item {

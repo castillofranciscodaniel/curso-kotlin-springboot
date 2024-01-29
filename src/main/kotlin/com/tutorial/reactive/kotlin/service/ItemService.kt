@@ -5,7 +5,7 @@ import com.tutorial.reactive.kotlin.model.Item
 import org.springframework.stereotype.Service
 
 @Service
-class ItemService(val itemRepository: ItemRepository) {
+class ItemService(private val itemRepository: ItemRepository) {
 
     fun save(item: Item) = this.itemRepository.save(item);
 
